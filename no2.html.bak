@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<title>demo2</title>
+</head>
+<script src="http://www.appadhoc.com/downloads/web/adhoc.min.js"></script>
+<body onload="adhoc.init('ADHOC_8ab9804b-0592-4b74-81e2-0f86f6d10443')">
+<button href="" onclick="adhoc.getExperimentFlags('ADHOC_APPKEY', showFlags)">测试获得模块开关</button>
+</body>
+</html>
