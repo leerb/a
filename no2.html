@@ -15,6 +15,7 @@
     function applyFlags(flags) { 
       var text = JSON.stringify(flags);
 	  console.log(text);
+	  console.log(flags.testFlag);
       if (flags.hasOwnProperty('testFlag') && flags.testFlag) {
         text = text + " 用户看到测试中的B版本";
       } else {
