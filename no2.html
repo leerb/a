@@ -17,7 +17,7 @@
       var text = JSON.stringify(flags);
 	  console.log(text);
 	  console.log(flags.testFlag);
-      if (flags.hasOwnProperty('nub') && flags.testFlag) {
+      if (flags.hasOwnProperty('nub')) {
 		text = text + " 用户看到标准"+ flags.nub +"版本";
       }
       document.getElementById('flags').innerHTML = text;
