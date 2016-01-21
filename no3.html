@@ -8,7 +8,7 @@
 <title>demo3</title>
 </head>
 <script src="http://www.appadhoc.com/downloads/web/adhoc.min.js"></script>
-<body onload="adhoc.init('ADHOC_89b26018-5ac9-4bd4-bbeb-07e8f0967d42')">
+<body onload="adhoc.init('ADHOC_6a230ee8-f4f3-4149-b035-0c9353d539c4')">
 
 <!-- Use experiment flags to implement A/B versions -->
   <div id="flags"></div>
@@ -16,9 +16,9 @@
     function applyFlags(flags) { 
       var text = JSON.stringify(flags);
 	  console.log(text);
-	  console.log(flags.testFlag);
-      if (flags.hasOwnProperty('nub')) {
-		text = text + " 用户看到标准"+ flags.nub +"版本";
+	  console.log(flags.v);
+      if (flags.hasOwnProperty('v')) {
+		text = text + " 用户看到标准"+ flags.v +"版本";
       }
       document.getElementById('flags').innerHTML = text;
     }
