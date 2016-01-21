@@ -25,9 +25,10 @@
   window.onload = function(){
 	adhoc.init('ADHOC_6a230ee8-f4f3-4149-b035-0c9353d539c4');
 	document.getElementById('btn').onclick = function(){
-		adhoc.getExperimentFlags(applyFlags);
-		adhoc.incrementStat('clicks', 1);
+		
 	};
+	adhoc.getExperimentFlags(applyFlags);
+		adhoc.incrementStat('clicks', 1);
 	
   };
     function applyFlags(flags) { 
