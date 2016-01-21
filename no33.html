@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<title>demo3</title>
+</head>
+<script src="http://www.appadhoc.com/downloads/web/adhoc.min.js"></script>
+<body onload="">
+
+<!-- Use experiment flags to implement A/B versions -->
+  <div id="flags"></div>
+  <script>
+  window.onload = function(){
+	adhoc.init('ADHOC_6a230ee8-f4f3-4149-b035-0c9353d539c4');
+	document.getElementById('flags').onclick = function(){
+		adhoc.getExperimentFlags(applyFlags);
+		adhoc.incrementStat('clicks', 1);
+	};
+	
+  };
+    function applyFlags(flags) { 
+      var text = JSON.stringify(flags);
+	  console.log(text);
+	  console.log(flags.v);
+      if (flags.hasOwnProperty('v')) {
+		text = text + " 用户看到标准"+ flags.v +"版本";
+      }
+      document.getElementById('flags').innerHTML = text;
+    }
+  </script>
+
+  <!-- Get experiment flags -->
+  <p>
+    <button id="btn" href="">测试获得模块开关</button>
+  </p>
+
+  <!-- Report stats 
+  <p>
+    <button href="" onclick="">统计点击次数</button>
+  </p>-->
+</body>
+</html>
