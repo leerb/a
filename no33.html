@@ -6,6 +6,15 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="format-detection" content="telephone=no" />
 <title>demo3</title>
+<style type="text/css">
+.a {background:red;}
+.B {background:green;}
+.C {background:yellow;}
+.D {background:gray;}
+.E {background:black;}
+.F {background:pink;}
+.G {background:purple;}
+</style>
 </head>
 <script src="http://www.appadhoc.com/downloads/web/adhoc.min.js"></script>
 <body onload="">
@@ -28,7 +37,9 @@
       if (flags.hasOwnProperty('v')) {
 		text = text + " 用户看到标准"+ flags.v +"版本";
       }
-      document.getElementById('flags').innerHTML = text;
+	  var oFlags = document.getElementById('flags');
+      oFlags.innerHTML = text;
+	  oFlags.className = flags.v;
     }
   </script>
 
