@@ -26,12 +26,12 @@
 
   <!-- Get experiment flags -->
   <p>
-    <button href="" onclick="adhoc.getExperimentFlags(applyFlags)">测试获得模块开关</button>
+    <button href="" onclick="adhoc.getExperimentFlags(applyFlags);adhoc.incrementStat('clicks', 1);">测试获得模块开关</button>
   </p>
 
-  <!-- Report stats -->
+  <!-- Report stats 
   <p>
-    <button href="" onclick="adhoc.incrementStat('clicks', 1)">统计点击次数</button>
-  </p>
+    <button href="" onclick="">统计点击次数</button>
+  </p>-->
 </body>
 </html>
