@@ -17,18 +17,17 @@
 </style>
 </head>
 <script src="http://www.appadhoc.com/downloads/web/adhoc.min.js"></script>
-<body onload="">
+<body>
 
 <!-- Use experiment flags to implement A/B versions -->
   <div id="flags"></div>
   <script>
   window.onload = function(){
+
 	adhoc.init('ADHOC_6a230ee8-f4f3-4149-b035-0c9353d539c4');
-	document.getElementById('btn').onclick = function(){
-		
-	};
+	
 	adhoc.getExperimentFlags(applyFlags);
-		adhoc.incrementStat('clicks', 1);
+	adhoc.incrementStat('clicks', 1);
 	
   };
     function applyFlags(flags) { 
@@ -44,14 +43,9 @@
     }
   </script>
 
-  <!-- Get experiment flags -->
   <p>
     <button id="btn" href="">测试获得模块开关</button>
   </p>
 
-  <!-- Report stats 
-  <p>
-    <button href="" onclick="">统计点击次数</button>
-  </p>-->
 </body>
 </html>
